@@ -128,4 +128,8 @@ class Alumno extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Seguimiento::className(), ['seg_fkalumno' => 'alu_id']);
     }
+
+     public static function map(){ //esta la uso en la vista _form.php de REACCION
+        return ArrayHelper::map(Alumno::find()->all(),'alu_id', 'aluFkusuario.usu_nombre');
+    }
 }
