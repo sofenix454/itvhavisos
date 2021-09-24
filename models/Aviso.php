@@ -22,6 +22,7 @@ namespace app\models;
  */
 class Aviso extends \yii\db\ActiveRecord
 {
+    public $variablePrueba;
     /**
      * {@inheritdoc}
      */
